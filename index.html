@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -18,67 +18,29 @@
     }
 
     .glitch {
-      position: relative;
-      color: #ddd;
-      font-size: 2.5rem;
-      letter-spacing: 0.15em;
-      animation: flicker 3s infinite;
-    }
-
-    .glitch::before,
-    .glitch::after {
-      content: attr(data-text);
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      overflow: hidden;
-      opacity: 0.8;
-    }
-
-    .glitch::before {
-      color: #ff004c;
-      transform: translate(-2px, 0);
-      animation: glitch1 2s infinite linear alternate-reverse;
-    }
-
-    .glitch::after {
-      color: #00fff9;
-      transform: translate(2px, 0);
-      animation: glitch2 1.5s infinite linear alternate-reverse;
-    }
-
-    @keyframes glitch1 {
-      0% { clip-path: inset(0 0 90% 0); }
-      20% { clip-path: inset(10% 0 60% 0); }
-      40% { clip-path: inset(30% 0 40% 0); }
-      60% { clip-path: inset(50% 0 20% 0); }
-      80% { clip-path: inset(70% 0 10% 0); }
-      100% { clip-path: inset(0 0 90% 0); }
-    }
-
-    @keyframes glitch2 {
-      0% { clip-path: inset(80% 0 5% 0); }
-      20% { clip-path: inset(60% 0 20% 0); }
-      40% { clip-path: inset(40% 0 40% 0); }
-      60% { clip-path: inset(20% 0 60% 0); }
-      80% { clip-path: inset(10% 0 70% 0); }
-      100% { clip-path: inset(80% 0 5% 0); }
+      color: #bfbfbf;
+      font-size: 2.4rem;
+      letter-spacing: 0.12em;
+      animation: flicker 0.9s infinite;
     }
 
     @keyframes flicker {
-      0%, 95% { opacity: 1; }
-      96% { opacity: 0.2; }
-      97% { opacity: 1; }
-      98% { opacity: 0.1; }
-      100% { opacity: 1; }
+      0%   { opacity: 1; transform: translate(0); }
+      10%  { opacity: 0.4; }
+      20%  { opacity: 1; }
+      30%  { opacity: 0.2; transform: translate(-1px, 1px); }
+      40%  { opacity: 1; }
+      50%  { opacity: 0.5; transform: translate(1px, -1px); }
+      60%  { opacity: 1; }
+      70%  { opacity: 0.3; }
+      80%  { opacity: 1; transform: translate(-1px, 0); }
+      90%  { opacity: 0.6; }
+      100% { opacity: 1; transform: translate(0); }
     }
   </style>
 </head>
 
 <body>
-  <div class="glitch" data-text="THE ATTENTION SEEKER">
-    THE ATTENTION SEEKER
-  </div>
+  <div class="glitch">The Attention Seeker</div>
 </body>
 </html>
