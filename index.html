@@ -8,12 +8,23 @@
     body {
       margin: 0;
       height: 100vh;
+      background-color: black;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: black;
-      color: #bfbfbf;
       font-family: "Times New Roman", serif;
+      color: #bfbfbf;
+    }
+
+    .small-text {
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      margin-bottom: 20px;
+      opacity: 0.6;
+    }
+
+    .main-text {
       font-size: 2.2rem;
       letter-spacing: 0.08em;
     }
@@ -21,6 +32,7 @@
 </head>
 
 <body>
-  The Attention Seeker
+  <div class="small-text">Thank You For Playing</div>
+  <div class="main-text">The Attention Seeker</div>
 </body>
 </html>
